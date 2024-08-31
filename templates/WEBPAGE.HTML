@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - CodroidHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #7700ff;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           
+            height: 60px;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #7700ff;
+            color: white;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .theme-section {
+            background-image: url('your-theme-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #7700ff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .theme-section h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .theme-section p {
+            font-size: 24px;
+            margin: 10px 0 0;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #7700ff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">About Developer 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/about developer" target="_blank">about developer</a>
+                <a href="https://github.com/tarun8295747673" target="_blank">Github Profile</a>
+                <a href="https://linkedin.com/in/tarun-kumar-fresher" target="_blank">LinkedIn Profile</a>
+            </div>
+        </div>
+        <div>
+            <a href="/">Home</a>    
+            <a href="/about_CodroidHub">About CodroidHub </a>
+            <a href="/about_instructor">Instructors </a>
+            <a href="/login">Login</a>   
+            <a href="/signup">Sign Up</a>  
+            
+        </div>
+    </div>
+
+    <div class="theme-section">
+        <h1>Project Title</h1>
+        <p>(AI-Assisted Manufacturing Process in the Automotive Industry)</p>
+    </div>
+
+    <div class="content">
+        <h1>Hi TARUN KUMAR, thanks for coming! I'm excited to show you the project that been working on. </h1><br><br>
+        <p><h1>Let's START  </h1></p>
+        <div>
+            <button onclick="window.location.href='/main'">
+            Welcome
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <a href="mailto:contact@codroidhub.com">Contact Us</a> | 
+        <a href="https://github.com/tarun8295747673" target="_blank">Github</a>
+    </footer>
+
+</body>
+</html>
