@@ -1,4 +1,3 @@
-requirements:
 Flask
 google.generativeai
 google
