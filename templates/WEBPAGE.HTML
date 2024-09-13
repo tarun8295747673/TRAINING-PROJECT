@@ -3,151 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CodroidHub - AI-Assisted Manufacturing Process in the Automotive Industry">
+    <meta name="keywords" content="AI, manufacturing, automotive industry, CodroidHub">
     <title>Home Page - CodroidHub</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
+            color: #333;
+            animation: fadeIn 1.5s ease-in-out;
         }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                opacity: 0;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Navbar */
         .navbar {
-            background-color: #7700ff;
+            background-color: #5e35b1;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: space-between;
-           
             height: 60px;
             padding: 10px 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: fadeIn 1s ease-in-out;
         }
+
         .navbar a {
             color: white;
-            text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
         }
+
         .navbar a:hover {
-            background-color: #7700ff;
-            color: white;
+            background-color: #4527a0;
+            border-radius: 5px;
+            transition: 0.3s;
         }
+
+        /* Dropdown */
         .dropdown {
-            float: left;
-            overflow: hidden;
+            position: relative;
         }
+
         .dropdown .dropbtn {
             font-size: 16px;
             border: none;
-            outline: none;
             color: white;
             padding: 14px 16px;
             background-color: inherit;
-            font-family: inherit;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
+            font-weight: 600;
         }
+
         .dropdown-content {
             display: none;
             position: absolute;
             background-color: #f9f9f9;
             min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
             z-index: 1;
+            border-radius: 5px;
         }
+
         .dropdown-content a {
-            float: none;
-            color: black;
+            color: #333;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
             text-align: left;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
         }
+
         .dropdown-content a:hover {
-            background-color: #ddd;
+            background-color: #eee;
         }
+
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+        /* Theme Section */
         .theme-section {
-            background-image: url('your-theme-background.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #7700ff;
-            text-align: center;
-            padding: 60px 20px;
-        }
-        .theme-section h1 {
-            font-size: 48px;
-            margin: 0;
-        }
-        .theme-section p {
-            font-size: 24px;
-            margin: 10px 0 0;
-        }
-        .content {
-            padding: 20px;
-            text-align: center;
-        }
-        footer {
-            background-color: #7700ff;
+            background: linear-gradient(135deg, #6a1b9a 30%, #8e24aa 100%);
             color: white;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 100px 20px;
+            background-size: cover;
+            background-position: center;
+            animation: zoomIn 1.5s ease;
         }
+
+        .theme-section h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 48px;
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .theme-section p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 22px;
+            margin-top: 20px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Content */
+        .content {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            margin: 40px auto;
+            max-width: 800px;
+            animation: slideUp 1.2s ease;
+        }
+
+        .content h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .content button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #5e35b1;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .content button:hover {
+            background-color: #4527a0;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #5e35b1;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-family: 'Roboto', sans-serif;
+        }
+
         footer a {
             color: white;
             text-decoration: none;
             margin: 0 10px;
+            font-weight: 500;
         }
+
         footer a:hover {
             text-decoration: underline;
         }
-        
+
+        @media screen and (max-width: 600px) {
+            .navbar a, .dropdown .dropbtn {
+                display: block;
+                text-align: left;
+            }
+
+            .theme-section {
+                padding: 50px 20px;
+            }
+
+            .theme-section h1 {
+                font-size: 36px;
+            }
+
+            .content {
+                padding: 40px 20px;
+                margin: 20px auto;
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Navbar -->
     <div class="navbar">
         <div class="dropdown">
-            <button class="dropbtn">About Developer 
-                <i class="fa fa-caret-down"></i>
-            </button>
+            <button class="dropbtn">About Developer</button>
             <div class="dropdown-content">
-                <a href="/about developer" target="_blank">about developer</a>
-                <a href="https://github.com/tarun8295747673" target="_blank">Github Profile</a>
+                <a href="/about_developer" target="_blank">About Developer</a>
+                <a href="https://github.com/tarun8295747673" target="_blank">GitHub Profile</a>
                 <a href="https://linkedin.com/in/tarun-kumar-fresher" target="_blank">LinkedIn Profile</a>
             </div>
         </div>
         <div>
-            <a href="/">Home</a>    
-            <a href="/about_CodroidHub">About CodroidHub </a>
-            <a href="/about_instructor">Instructors </a>
-            <a href="/login">Login</a>   
-            <a href="/signup">Sign Up</a>  
-            
+            <a href="/">Home</a>
+            <a href="/about_CodroidHub">About CodroidHub</a>
+            <a href="/about_instructor">Instructors</a>
+            <a href="/login">Login</a>
+            <a href="/signup">Sign Up</a>
         </div>
     </div>
 
+    <!-- Theme Section -->
     <div class="theme-section">
         <h1>Project Title</h1>
-        <p>(AI-Assisted Manufacturing Process in the Automotive Industry)</p>
+        <p>AI-Assisted Manufacturing Process in the Automotive Industry</p>
     </div>
 
+    <!-- Content Section -->
     <div class="content">
-        <h1>Hi TARUN KUMAR, thanks for coming! I'm excited to show you the project that been working on. </h1><br><br>
-        <p><h1>Let's START  </h1></p>
-        <div>
-            <button onclick="window.location.href='/main'">
-            Welcome
-            </button>
-        </div>
+        <h1>Hi TARUN KUMAR, thanks for coming! I'm excited to show you the project I've been working on.</h1>
+        <button onclick="window.location.href='/main'">Welcome</button>
     </div>
 
+    <!-- Footer -->
     <footer>
         <a href="mailto:contact@codroidhub.com">Contact Us</a> | 
-        <a href="https://github.com/tarun8295747673" target="_blank">Github</a>
+        <a href="https://github.com/tarun8295747673" target="_blank">GitHub</a>
     </footer>
 
 </body>
