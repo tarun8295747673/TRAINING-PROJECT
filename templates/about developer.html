@@ -69,10 +69,8 @@
         }
         .certifications-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); /* Increase min-width */
             gap: 20px;
-            max-width: 50%;
-            max-height: 50%
         }
         .certification {
             background-color: #f4f4f4;
@@ -82,7 +80,8 @@
             text-align: center;
         }
         .certification img {
-            width: 20%;
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
             border-radius: 5px;
         }
     </style>
@@ -91,19 +90,23 @@
 
     <div class="container">
         <div class="profile-section">
-            <img src="\PROJECT\6.image DP.jpg" alt="TARUN KUMAR">
+            <img src="images/6.image_DP.jpg" alt="Tarun Kumar's Profile Picture">
         </div>
         <div class="info-section">
             <h1>TARUN KUMAR</h1>
-            <p><strong>Course:</strong> B.Tech in Artificial intelligence And Machine Learning </p>
-            <p><strong>Branch:</strong> Artificial intelligence And Machine Learning</p>
+            <p><strong>Course:</strong> B.Tech in Artificial Intelligence and Machine Learning</p>
+            <p><strong>Branch:</strong> Artificial Intelligence and Machine Learning</p>
             <p><strong>Batch:</strong> 2022-2026</p>
-            <p><strong>College:</strong> Ambala College Of Engineering And Applied Research</p>
+            <p><strong>College:</strong> Ambala College of Engineering and Applied Research</p>
             <p><strong>Affiliated University:</strong> Kurukshetra University</p>
-            <p class="short-bio">My self Tarun Kumar i am doing my B.Tech from ambala college of engineering and applied research in (AI&ML) and i hove done my summer training from CodroidHub under the guidance of <b>Mr.devashish Kumar,Supervisor- Ms. Bhawana Saini, RN Thakur Presidential Graduate School, Kathmandu, Nepal (Westcliff University, USA) Doctor of Computer Science </b> .</p>
+            <p class="short-bio">My name is Tarun Kumar. I am pursuing a B.Tech from Ambala College of Engineering and Applied Research in AI & ML. I have completed my summer training from CodroidHub under the guidance of <b>Mr. Devashish Kumar, Supervisor - Ms. Bhawana Saini, RN Thakur Presidential Graduate School, Kathmandu, Nepal (Westcliff University, USA) Doctor of Computer Science</b>.</p>
             <div class="social-links">
-                <a href="https://github.com/tarun8295747673" target="_blank"><img src="\PROJECT\7.github.jpeg" alt="Github" width="140"></a>
-                <a href="www.linkedin.com/in/tarun-kumar-fresher" target="_blank"><img src="\PROJECT\8.linkedin.png" alt="LinkedIn" width="80"></a>
+                <a href="https://github.com/tarun8295747673" target="_blank" aria-label="Tarun Kumar's GitHub Profile">
+                    <img src="images/7.github.jpeg" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/tarun-kumar-fresher" target="_blank" aria-label="Tarun Kumar's LinkedIn Profile">
+                    <img src="images/8.linkedin.png" alt="LinkedIn">
+                </a>
             </div>
         </div>
     </div>
@@ -111,22 +114,20 @@
     <div class="certifications-section">
         <h2>Certifications @ CodroidHub Private Limited</h2>
         <div class="certifications-container">
-            <div class="LINKEDIN">
-                <img src="/PROJECT/2.LINKEDIN.jpg" alt="Certificate 1" width="600">
+            <div class="certification">
+                <img src="\AI-flask/templates/2.LINKEDIN.jpg" alt="LinkedIn Certification Badge">
             </div>
-            <div class="GITHUB">
-                <img src="/PROJECT/1.GITHUB.jpg" alt="Certificate 2" width="600">
-            </div><br>
-            <div class="POWER BI">
-                <img src="\PROJECT\3.POWER BI.png" alt="Certificate 3" width="600">
+            <div class="certification">
+                <img src="\AI-flask/templates/1.GITHUB.jpg" alt="GitHub Certification Badge">
             </div>
-            <div class="PROMPT ENGINEERING">
-                <img src="\PROJECT\4.PROMPT ENGINEERING.png" alt="Certificate 4" width="600">
+            <div class="certification">
+                <img src="\AI-flask/templates/3.POWER BI.png" alt="Power BI Certification Badge">
+            </div>
+            <div class="certification">
+                <img src="\AI-flask/templates/4.PROMPT ENGINEERING.png" alt="Prompt Engineering Certification Badge">
             </div>
         </div>
     </div>
 
 </body>
 </html>
-
-
