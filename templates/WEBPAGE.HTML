@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CodroidHub - AI-Assisted Manufacturing Process in the Automotive Industry">
     <meta name="keywords" content="AI, manufacturing, automotive industry, CodroidHub">
+    <meta name="robots" content="index, follow">
     <title>Home Page - CodroidHub</title>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
@@ -20,7 +24,6 @@
             animation: fadeIn 1.5s ease-in-out;
         }
 
-        /* Animations */
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
@@ -48,8 +51,7 @@
             }
         }
 
-        /* Navbar */
-        .navbar {
+        nav.navbar {
             background-color: #5e35b1;
             overflow: hidden;
             display: flex;
@@ -64,7 +66,7 @@
             animation: fadeIn 1s ease-in-out;
         }
 
-        .navbar a {
+        nav.navbar a {
             color: white;
             padding: 14px 16px;
             text-decoration: none;
@@ -72,13 +74,12 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        .navbar a:hover {
+        nav.navbar a:hover {
             background-color: #4527a0;
             border-radius: 5px;
             transition: 0.3s;
         }
 
-        /* Dropdown */
         .dropdown {
             position: relative;
         }
@@ -122,7 +123,6 @@
             display: block;
         }
 
-        /* Theme Section */
         .theme-section {
             background: linear-gradient(135deg, #6a1b9a 30%, #8e24aa 100%);
             color: white;
@@ -149,7 +149,6 @@
             font-weight: 300;
         }
 
-        /* Content */
         .content {
             padding: 60px 20px;
             text-align: center;
@@ -188,7 +187,6 @@
             transform: translateY(-3px);
         }
 
-        /* Footer */
         footer {
             background-color: #5e35b1;
             color: white;
@@ -212,7 +210,7 @@
         }
 
         @media screen and (max-width: 600px) {
-            .navbar a, .dropdown .dropbtn {
+            nav.navbar a, .dropdown .dropbtn {
                 display: block;
                 text-align: left;
             }
@@ -239,7 +237,7 @@
 <body>
 
     <!-- Navbar -->
-    <div class="navbar">
+    <nav class="navbar">
         <div class="dropdown">
             <button class="dropbtn">About Developer</button>
             <div class="dropdown-content">
@@ -255,7 +253,7 @@
             <a href="/login">Login</a>
             <a href="/signup">Sign Up</a>
         </div>
-    </div>
+    </nav>
 
     <!-- Theme Section -->
     <div class="theme-section">
