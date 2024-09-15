@@ -22,14 +22,12 @@ model = genai.GenerativeModel('gemini-pro')
 chat = model.start_chat(history=[])
 
 medical_keywords = [
-
 "Oil", "Tires", "Brakes", "Battery", "Engine", "Fluids", "Alignment", "Coolant", "Transmission", "Suspension", "Exhaust",
 "Filter", "Radiator", "Spark", "Wipers", "Pressure", "Rotors", "Pads", "Bearings", "Clutch", "Shocks", "Steering", "Ignition", 
 "Axles", "Gaskets", "Pistons", "Hoses", "Belts", "Lights", "Sensors", "Plugs", "Valves", "Fuel", "Airbags", "Muffler", "Turbo", 
 "Differential", "Bumper", "Alternator", "Pump", "Timing", "Battery", "Dashboard", "Transmission", "Chassis", "Cylinder", 
 "Bearings", "Catalytic", "Differential", "Fuses", "Grille", "Headlights", "Heating", "Insulation", "Powertrain", "Seals", 
-"Thermostat", "U-joint", "Vacuum", "Wiring".    
-"CustomerFeedback", "VehicleDesign", "SentimentAnalysis", "TopicModeling", "FeedbackAnalysis", "DesignImprovement", 
+"Thermostat", "U-joint", "Vacuum", "Wiring","CustomerFeedback", "VehicleDesign", "SentimentAnalysis", "TopicModeling", "FeedbackAnalysis", "DesignImprovement", 
 "NLPTool", "MachineLearning", "FeedbackTrends", "DataAnalytics", "FeatureAnalysis", "UserExperience", "ReviewAnalysis", 
 "SurveyAnalysis", "SentimentTracking", "CustomerInsights", "DesignOptimization", "FeedbackClassification", "KeywordExtraction", 
 "FeedbackLoop", "CustomerPreferences", "ProductDevelopment", "BehavioralAnalysis", "TextAnalytics", "FeedbackIntegration", 
