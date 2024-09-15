@@ -22,7 +22,6 @@ model = genai.GenerativeModel('gemini-pro')
 chat = model.start_chat(history=[])
 
 medical_keywords = [
-Here are the 60 keywords in double quotes, separated by commas:
 
 "Oil", "Tires", "Brakes", "Battery", "Engine", "Fluids", "Alignment", "Coolant", "Transmission", "Suspension", "Exhaust",
 "Filter", "Radiator", "Spark", "Wipers", "Pressure", "Rotors", "Pads", "Bearings", "Clutch", "Shocks", "Steering", "Ignition", 
