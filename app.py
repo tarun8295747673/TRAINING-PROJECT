@@ -101,7 +101,7 @@ def wSD():
 def home():
     return render_template('WEBPAGE.html')
 
-@app.route('/prediction', methods=['/GET', '/POST'])
+@app.route('/prediction', methods=['GET', 'POST'])
 def prediction():
     if request.method == 'POST':
         inputs = [float(request.form[field]) for field in ['Parameter 1', 'Parameter 2', 'Parameter 3', 'Parameter 4', 'Parameter 5', 'Parameter 6', 'Parameter 7', 'Parameter 8']]
@@ -188,3 +188,4 @@ def StatisticalScript():
     </html>
     """
     return html_content
+
