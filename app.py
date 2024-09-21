@@ -187,4 +187,5 @@ def StatisticalScript():
     </body>
     </html>
     """
+    
     return html_content
