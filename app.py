@@ -192,4 +192,4 @@ def StatisticalScript():
 
 
 
-app.run(port=6235)
+app.run(port=6225)
