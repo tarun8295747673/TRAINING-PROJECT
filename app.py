@@ -65,7 +65,7 @@ medical_keywords = [
 "FeatureSentimentInsights", "FeedbackDataPlatform", "DesignResearchInsights", "CustomerReviewMetrics", "AutomotiveDesignFeedback", 
 "UserExperienceInsights", "FeedbackAnalysisDashboard", "SentimentFeedbackAnalysis", "ProductInsightsPlatform", "DesignTrendsInsights", 
 "CustomerFeedbackStrategy", "SentimentTrackingInsights", "FeedbackAnalysisMetrics", "AutomotiveFeedbackAnalysis", 
-"FeatureFeedbackInsights", "CustomerCentricDesignInsights"
+"FeatureFeedbackInsights", "CustomerCentricDesignInsights", "hi","hello"
 ]
 
 csv_path = 'datasetFile.csv'  
