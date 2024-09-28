@@ -190,7 +190,3 @@ def StatisticalScript():
     """
     
     return html_content
-
-
-
-app.run(port=6275)
