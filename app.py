@@ -190,3 +190,9 @@ def StatisticalScript():
     """
     
     return html_content
+
+@app.route('/powerBI')
+def powerBI():
+    return render_template('dashboard.html')
+
+app.run(port=435)

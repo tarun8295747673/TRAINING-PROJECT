@@ -229,6 +229,10 @@
                 font-size: 28px;
             }
         }
+
+    a , a:visited , a::after , a:hover{
+        background: #8e24aa;
+    }
     </style>
 </head>
 <body>
@@ -237,12 +241,13 @@
     <nav class="navbar">
         <div class="dropdown">
             <button class="dropbtn">About My-Self</button>
-            <div class="dropdown-content">
+            <div class="dropdown-content" style="position: fixed; ">
                 <a href="/about_developer" target="_blank">About Developer</a>
                 <a href="https://github.com/tarun8295747673" target="_blank">GitHub Profile</a>
                 <a href="https://linkedin.com/in/tarun-kumar-fresher" target="_blank">LinkedIn Profile</a>
             </div>
         </div>
+        
         <div>
             <a href="/">Home</a>
             <a href="/about_CodroidHub">About CodroidHub</a>
@@ -251,7 +256,7 @@
             <a href="/signup">Sign Up</a>
         </div>
     </nav>
-
+    
     <!-- Theme Section -->
     <div class="theme-section">
         <h1>Project Title</h1>
