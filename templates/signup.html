@@ -4,33 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #5e35b1; /* Soft tropical background color */
+            color: #333; /* Darker text color */
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height for vertical centering */
+        }
+
+        .form-wrapper {
+            background-color: #ffffff; /* White background for the form */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 40px 20px;
+            width: 100%;
+            max-width: 400px; /* Set a max width for the form */
+            animation: slideUp 1.2s ease;
+        }
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            color: #7700ff; /* Teal color for the title */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #7700ff; /* Focus color */
+            outline: none;
+        }
+
+        .submit-btn {
+            background-color: #7700ff; /* Button color */
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #5e35b1; /* Darker button hover color */
+            transform: translateY(-2px);
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register-link span {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .register-link a {
+            color: #7700ff; /* Link color */
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="form-container">
-            <div class="form-box signup-box">
-                <h2>Signup</h2>
-                <form>
-                    <div class="input-group">
-                        <label for="signup-name">Name</label>
-                        <input type="text" id="signup-name" placeholder="Enter your name">
-                    </div>
-                    <div class="input-group">
-                        <label for="signup-email">Email</label>
-                        <input type="email" id="signup-email" placeholder="Enter your email">
-                    </div>
-                    <div class="input-group">
-                        <label for="signup-password">Password</label>
-                        <input type="password" id="signup-password" placeholder="Create a password">
-                    </div>
-                    <button type="submit" class="btn">Signup</button>
-                    <div class="register-link">
-                        <span>Already a member?</span>
-                        <a href="/login" id="show-login">Login here</a>
-                    </div>
-                </form>
-            </div>
+        <div class="form-wrapper">
+            <h2 class="form-title">Signup</h2>
+            <form>
+                <div class="input-group">
+                    <label for="signup-name">Name</label>
+                    <input type="text" id="signup-name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Create a password" required>
+                </div>
+                <button type="submit" class="submit-btn">Signup</button>
+                <div class="register-link">
+                    <span>Already a member?</span>
+                    <a href="/login" id="show-login">Login here</a>
+                </div>
+            </form>
         </div>
     </div>
 </body>

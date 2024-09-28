@@ -137,7 +137,7 @@ def ask():
     user_message = str(request.form['messageText'])
     
     if not is_medical_query(user_message):
-        bot_response_text = "I'm sorry, I can only answer medical-related questions. Please ask a question related to medical topics."
+        bot_response_text = "I'm sorry, I can only answer vehivle maintenance related questions. Please ask a question related to vehicle maintenance topics."
     else:
         bot_response = chat.send_message(user_message)
         bot_response_text = bot_response.text
