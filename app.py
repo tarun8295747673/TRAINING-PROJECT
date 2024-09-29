@@ -117,15 +117,15 @@ def chatbot():
 
 @app.route('/about_CodroidHub')
 def about_CodroidHub():
-    return render_template('about_CodroidHub.html')
+    return render_template('about CodroidHub.html')
 
 @app.route('/about_instructor')
 def about_instructor():
-    return render_template('about_instructor.html')
+    return render_template('about instructor.html')
 
 @app.route('/about_developer')
 def about_developer():
-    return render_template('about_developer.html')
+    return render_template('about developer.html')
 
 @app.route('/main')
 def main():
