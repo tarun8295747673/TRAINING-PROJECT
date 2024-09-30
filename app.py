@@ -168,6 +168,7 @@ def chatbotScript():
     </html>
     """
     return html_content
+    
 
 @app.route('/StatisticalScript')
 def StatisticalScript():
