@@ -76,6 +76,7 @@ X = data[['Parameter 1', 'Parameter 2', 'Parameter 3', 'Parameter 4', 'Parameter
 y = data['Parameter 9']
 X = X.to_numpy()
 
+
 model1 = LinearRegression()
 model1.fit(X, y)
 
