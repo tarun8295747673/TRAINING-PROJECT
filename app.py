@@ -151,6 +151,27 @@ def is_medical_query(query):
     return any(keyword.lower() in query.lower() for keyword in medical_keywords)
 
 # Route to display the .py file
+@app.route('/cvScript')
+def cvScript():
+    with open('static/cv.py','r') as f:
+        code = f.read()
+    lexer = PythonLexer()
+    formatter = HtmlFormatter(full=True, linenos=True, style='friendly')
+    highlighted_code = highlight(code, lexer, formatter)
+    html_content = f"""
+    <html>
+    <head>
+        <title>Computer Vision Script</title>
+        <style>{formatter.get_style_defs('.highlight')}</style>
+    </head>
+    <body>
+        <h1>Highlighted Python Script</h1>
+        <div class="highlight">{highlighted_code}</div>
+    </body>
+    </html>
+    """
+    return html_content
+
 @app.route('/chatbotScript')
 def chatbotScript():
     with open('static/chatbot.py', 'r') as f:
@@ -199,5 +220,11 @@ def StatisticalScript():
 def powerBI():
     return render_template('dashboard.html')
 
+@app.route('/cvWeb')
+def cvWeb():
+    return render_template('cvWebImplementation.html')
+
+
+app.run(port=657)
 
 

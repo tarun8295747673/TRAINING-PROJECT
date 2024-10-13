@@ -1,10 +1,6 @@
-from flask import Flask, render_template, request , jsonify
+from flask import Flask, request , jsonify
 
 import google.generativeai as genai
-
-from sklearn.linear_model import LinearRegression
-import pandas as pd
-
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -18,7 +14,12 @@ model = genai.GenerativeModel('gemini-pro')
 chat = model.start_chat(history=[])
 
 medical_keywords = [
-"CustomerFeedback", "VehicleDesign", "SentimentAnalysis", "TopicModeling", "FeedbackAnalysis", "DesignImprovement", 
+"Oil", "Tires", "Brakes", "Battery", "Engine", "Fluids", "Alignment", "Coolant", "Transmission", "Suspension", "Exhaust",
+"Filter", "Radiator", "Spark", "Wipers", "Pressure", "Rotors", "Pads", "Bearings", "Clutch", "Shocks", "Steering", "Ignition", 
+"Axles", "Gaskets", "Pistons", "Hoses", "Belts", "Lights", "Sensors", "Plugs", "Valves", "Fuel", "Airbags", "Muffler", "Turbo", 
+"Differential", "Bumper", "Alternator", "Pump", "Timing", "Battery", "Dashboard", "Transmission", "Chassis", "Cylinder", 
+"Bearings", "Catalytic", "Differential", "Fuses", "Grille", "Headlights", "Heating", "Insulation", "Powertrain", "Seals", 
+"Thermostat", "U-joint", "Vacuum", "Wiring","CustomerFeedback", "VehicleDesign", "SentimentAnalysis", "TopicModeling", "FeedbackAnalysis", "DesignImprovement", 
 "NLPTool", "MachineLearning", "FeedbackTrends", "DataAnalytics", "FeatureAnalysis", "UserExperience", "ReviewAnalysis", 
 "SurveyAnalysis", "SentimentTracking", "CustomerInsights", "DesignOptimization", "FeedbackClassification", "KeywordExtraction", 
 "FeedbackLoop", "CustomerPreferences", "ProductDevelopment", "BehavioralAnalysis", "TextAnalytics", "FeedbackIntegration", 
@@ -55,47 +56,10 @@ medical_keywords = [
 "FeatureSentimentInsights", "FeedbackDataPlatform", "DesignResearchInsights", "CustomerReviewMetrics", "AutomotiveDesignFeedback", 
 "UserExperienceInsights", "FeedbackAnalysisDashboard", "SentimentFeedbackAnalysis", "ProductInsightsPlatform", "DesignTrendsInsights", 
 "CustomerFeedbackStrategy", "SentimentTrackingInsights", "FeedbackAnalysisMetrics", "AutomotiveFeedbackAnalysis", 
-"FeatureFeedbackInsights", "CustomerCentricDesignInsights"
+"FeatureFeedbackInsights", "CustomerCentricDesignInsights", "hi", "hello"
 ]
 
-csv_path = 'datasetFile.csv'  
-data = pd.read_csv(csv_path)
 
-X = data[['Parameter 1', 'Parameter 2', 'Parameter 3', 'Parameter 4', 'Parameter 5', 'Parameter 6', 'Parameter 7', 'Parameter 8']]
-y = data['Parameter 9']
-X = X.to_numpy()
-
-model1 = LinearRegression()
-model1.fit(X, y)
-
-@app.route('/prediction', methods=['GET', 'POST'])
-def prediction():
-    if request.method == 'POST':
-        inputs = [float(request.form[field]) for field in ['Parameter 1', 'Parameter 2', 'Parameter 3', 'Parameter 4', 'Parameter 5', 'Parameter 6', 'Parameter 7', 'Parameter 8']]
-        prediction = model1.predict([inputs])
-        output = "Argument 1" if prediction[0] >= 0.5 else "Argument 2"
-        return render_template('index1.html', prediction_text=f'{output}')
-    return render_template('index1.html')
-
-@app.route('/chatbot')
-def chatbot():
-    return render_template('chat.html')
-
-@app.route('/coding')
-def coding():
-    return render_template('coding.html')
-
-@app.route('/about_CodroidHub')
-def about_CodroidHub():
-    return render_template('about CodroidHub.html')
-
-@app.route('/about_instructor')
-def about_instructor():
-    return render_template('about instructor.html')
-
-@app.route('/about_developer')
-def about_developer():
-    return render_template('about developer.html')
 
 
 @app.route('/ask', methods=['POST'])
