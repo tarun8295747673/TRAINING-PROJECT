@@ -225,6 +225,4 @@ def cvWeb():
     return render_template('cvWebImplementation.html')
 
 
-app.run(port=657)
-
 
